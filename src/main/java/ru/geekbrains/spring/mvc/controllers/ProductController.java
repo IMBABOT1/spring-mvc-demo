@@ -26,8 +26,8 @@ public class ProductController {
         return "form";
     }
     @GetMapping("/add_product")
-    public String addProduct(@RequestParam String title, @RequestParam int cost){
-        Product p = new Product(1l, title, cost);
+    public String addProduct(@ModelAttribute Product product){
+        Product p = product;
         productService.addProduct(p);
         return "redirect:/products";
     }
