@@ -28,4 +28,8 @@ public class ProductService {
         repository.addProduct(product);
     }
 
+    public void deleteProductByID(Long id){
+        repository.deleteProductByID(id);
+    }
+
 }

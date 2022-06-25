@@ -31,4 +31,10 @@ public class ProductController {
         productService.addProduct(p);
         return "redirect:/products";
     }
+
+    @GetMapping("/dell_product/{id}")
+    public String deleteProductByID(@PathVariable Long id){
+        productService.deleteProductByID(id);
+        return "redirect:/products";
+    }
 }

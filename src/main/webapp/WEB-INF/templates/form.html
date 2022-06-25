@@ -17,6 +17,7 @@
             <td>id</td>
             <td>title</td>
             <td>cost</td>
+            <td>action</td>
         </tr>
         </thead>
         <tbody>
@@ -24,6 +25,9 @@
             <td th:text="${product.id}"/>
             <td th:text="${product.title}"/>
             <td th:text="${product.cost}"/>
+            <td>
+                <a class="btn btn-danger" th:href="@{'/dell_product/' + ${product.id}}">Delete</a>
+            </td>
         </tr>
         </tbody>
     </table>

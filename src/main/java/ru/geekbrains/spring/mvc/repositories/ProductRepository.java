@@ -30,7 +30,7 @@ public class ProductRepository {
         return Collections.unmodifiableList(products);
     }
 
-    public Product getProductById(long id){
+    public Product getProductById(Long id){
         for (Product p : products){
             if (p.getId().equals(id)){
                 return p;
@@ -41,5 +41,14 @@ public class ProductRepository {
 
     public void addProduct(Product product){
         products.add(product);
+    }
+
+    public void deleteProductByID(Long id){
+        for (Product p: products){
+            if (p.getId().equals(id)){
+                products.remove(p);
+                break;
+            }
+        }
     }
 }
