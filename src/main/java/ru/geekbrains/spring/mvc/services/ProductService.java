@@ -1,11 +1,12 @@
 package ru.geekbrains.spring.mvc.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ru.geekbrains.spring.mvc.model.Product;
 import ru.geekbrains.spring.mvc.repositories.ProductRepository;
 
 import java.util.List;
-
+@Component
 public class ProductService {
 
     private ProductRepository repository;
@@ -22,4 +23,9 @@ public class ProductService {
     public Product getProductById(long id){
         return repository.getProductById(id);
     }
+
+    public void addProduct(Product product){
+        repository.addProduct(product);
+    }
+
 }
